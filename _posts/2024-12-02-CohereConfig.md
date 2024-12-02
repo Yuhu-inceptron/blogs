@@ -111,7 +111,7 @@ onnx_config = onnx_config_constructor(model.config)
 onnx_inputs, onnx_outputs = export(model, onnx_config, onnx_path, onnx_config.DEFAULT_ONNX_OPSET)
 ```
 `TasksManager.get_exporter_config_constructor` gets the config constructor for a model type and task combination
-Then by excuting the file aya_export, I can get model.onnx and model.onnx_data. Remember to comment
+Then by excuting the file aya_export, I can get model.onnx and model.onnx_data. Remember to comment the code below (you can comment after it complains the error, its hard to find this file)
 ```python
 if GLOBALS.onnx_shape_inference:
         _C._jit_pass_onnx_graph_shape_type_inference(
