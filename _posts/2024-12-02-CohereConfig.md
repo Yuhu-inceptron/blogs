@@ -5,7 +5,7 @@ date: 2024-12-02
 ## Add Cohere model config in optimum 
 **Step1** implement a custom ONNX configuration, if the model's architecture is similar to an architecture that is already spported, trying to simply inheriting from this class might work. For Aya-23-8B , I chose to inherit from GPTBigCodeOnnxConfig.
 
-In file `optimum/optimum/exporters/onnx/model_configs.py`,the class `GPTBigCodeOnnxConfig`already exsits,and it inherits other classes, see below
+In file `optimum/optimum/exporters/onnx/model_configs.py`,the class `GPTBigCodeOnnxConfig`already exsits, and it inherits other classes, there are many other classes as well in this file
 
 ```python 
   class GPTBigCodeOnnxConfig(TextDecoderWithPositionIdsOnnxConfig):
