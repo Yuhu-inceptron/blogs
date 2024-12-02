@@ -110,7 +110,8 @@ onnx_config_constructor = TasksManager.get_exporter_config_constructor("onnx", m
 onnx_config = onnx_config_constructor(model.config)
 onnx_inputs, onnx_outputs = export(model, onnx_config, onnx_path, onnx_config.DEFAULT_ONNX_OPSET)
 ```
-`TasksManager.get_exporter_config_constructor` gets the config constructor for a model type and task combination
+`TasksManager.get_exporter_config_constructor` gets the config constructor for a model type and task combination.
+
 Then by excuting the file aya_export, I can get model.onnx and model.onnx_data. Remember to comment the code below (you can comment after it complains the error, its hard to find this file)
 ```python
 if GLOBALS.onnx_shape_inference:
@@ -118,6 +119,7 @@ if GLOBALS.onnx_shape_inference:
 
 ```
 in `File "/opt/conda/lib/python3.10/site-packages/torch/onnx/utils.py", line 663, in _optimize_graph`, this code snippet shows twice in this file, we need to comment both of them, to sove this issure 
+
 `RuntimeError: The serialized model is larger than the 2GiB limit imposed by the protobuf library. Therefore the output file must be a file path, so that the ONNX external data can be written to the same directory. Please specify the output file name.`
 
 All the information is learned from the original document for exporting a model [optimum](https://huggingface.co/docs/optimum/en/exporters/onnx/usage_guides/contribute) 
