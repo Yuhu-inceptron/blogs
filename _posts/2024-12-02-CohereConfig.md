@@ -93,7 +93,7 @@ This is the file `optimum/exporters/tasks.py`, we add an entry in the `_SUPPORTE
 ```
 Now we have the model and the tasks it supports registered in tasks manager.In `optimum/utils/normalized_config.py` , in class `NormalizedConfigManager` we add an entry as well: ` "cohere": GPTBigCodeNormalizedTextConfig`
 
-**Steep4** Export onnx model
+**Step4** Export onnx model
 ``` python
 from transformers import AutoModelForCausalLM
 from pathlib import Path
