@@ -3,4 +3,7 @@
 #### SiLuRewrite
 ##### Sigmoid linear unit function
 SiluRewrite, Silu is x dot sigmoid(x), sigmoid and multiply, thats why rewrite, its kind like fused two operations
+#### RMSNormRewrite
+##### Root Mean Square Normalization
+#### FFNRewrite
 
